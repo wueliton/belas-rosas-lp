@@ -1,0 +1,284 @@
+*, 
+*:after,
+*:before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+body{
+  font-size: 100%;
+  list-style-type: none;
+  font-family: 'Montserrat';
+}
+
+img {
+  display: block;
+}
+
+button, .button {
+  padding: 12px;
+  text-transform: uppercase;
+  background: #D2004C;
+  color: white;
+  border: 0;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  text-align: center;
+  font-family: Montserrat;
+}
+
+h1 {
+  font-size: 3em;
+  line-height: 1em;
+  font-weight: 900;
+  color: #322B4E;
+}
+
+.caption {
+  font-size: 0.75em;
+  max-width: 300px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-end {
+  text-align: right;
+}
+
+.content {
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  max-width: 1200px;
+  padding: 40px 15px;
+  margin: auto;
+}
+
+header {
+  background: url(../images/background-pattern.png) repeat #FFEEF1;
+}
+
+header .logo {
+  color: red;
+}
+
+header .container {
+  padding-bottom: 0;
+}
+
+header .container .content {
+  text-align: center;
+  align-items: center;
+  gap: 20px;
+}
+
+header .date {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  font-weight: bold;
+}
+
+header .headline img {
+  margin: auto;
+  max-width: 100%;
+}
+
+header::before {
+  content: '';
+  height: 400px;
+  width: 200px;
+  background: url(../images/background-petal.png) no-repeat;
+  background-position: left top;
+  position: absolute;
+  right: 0;
+  top: 350px;
+}
+
+header .form {
+  display: flex;
+  width: 100%;
+  max-width: 400px;
+  border-radius: 8px;
+  border: 4px solid #ff416433;
+}
+
+header .form input {
+  border: 0;
+  padding: 12px;
+  border-radius: 4px 0 0 4px;
+  width: 100%;
+  outline: none;
+}
+
+.target {
+  background: #322B4E;
+  color: white;
+}
+
+.target .container {
+  padding: 20px 15px;
+}
+
+.target span {
+  margin: 0 10px;
+}
+
+.journey h2 {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  color: #322B4E;
+}
+
+.journey a {
+  padding: 20px;
+  background: black;
+  color: white;
+  border-radius: 20px 20px 4px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-start;
+  height: 230px;
+}
+
+.journey a h2 {
+  color: white;
+  font-size: 1.25em;
+}
+
+.journey .tag {
+  font-size: 0.75em;
+  background-color: #D2004C;
+  padding: 8px 12px;
+  border-radius: 20px;
+}
+
+.journey .date {
+  margin-top: auto;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.journey .date img {
+  height: 12px;
+  width: 12px;
+}
+
+.workshop-target {
+  background-color: #2C184D;
+  color: white;
+}
+
+.workshop-target img {
+  margin-top: -100px;
+  margin-bottom: -100px;
+  position: relative;
+  z-index: 2;
+}
+
+.workshop-target h3 {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+}
+
+.workshop-target ul {
+  list-style: none;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  padding-left: 30px;
+  margin-bottom: 30px;
+}
+
+.workshop-target ul li::before {
+  content: '';
+  height: 20px;
+  width: 20px;
+  position: absolute;
+  background: url(../images/check-circle.svg) no-repeat;
+  background-size: contain;
+  margin-left: -30px;
+}
+
+.about {
+  background-color: #FFB9B9;
+}
+
+.about .container {
+  padding: 0 15px;
+}
+
+.about h4 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #2C184D;
+  font-weight: 900;
+}
+
+.about p {
+  margin-bottom: 10px;
+  text-align: justify;
+}
+
+footer {
+  background: #D2004C;
+  color: white;
+  font-weight: bold;
+  font-size: 0.75em;
+}
+
+footer .container {
+  padding: 20px 15px;
+}
+
+@media (max-width: 1199px) {
+  header .content {
+    margin-bottom: 30px;
+  }
+
+  header::before {
+    display: none;
+  }
+
+  .journey .row {
+    gap: 20px;
+  }
+
+  .workshop-target {
+    text-align: center;
+  }
+
+  .workshop-target img {
+    margin: auto;
+    margin-top: -90px;
+    max-width: 100%;
+  }
+
+  .about .container {
+    padding-top: 30px;
+  }
+
+  .about .row {
+    flex-direction: column-reverse;
+  }
+
+  .about .about-image img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+  }
+
+  footer * {
+    text-align: center!important;
+  }
+}

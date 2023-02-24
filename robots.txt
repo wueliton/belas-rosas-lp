@@ -1,0 +1,3 @@
+User-agent: *
+
+Sitemap: https://wueliton.github.io/belas-rosas-lp/sitemap.xml
