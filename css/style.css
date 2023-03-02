@@ -5,6 +5,7 @@
   padding: 0;
   box-sizing: border-box;
   text-decoration: none;
+  scroll-behavior: smooth;
 }
 
 body{
@@ -38,8 +39,8 @@ h1 {
 }
 
 .caption {
-  font-size: 0.75em;
-  max-width: 300px;
+  max-width: 400px;
+  font-weight: 300;
 }
 
 .text-center {
@@ -106,7 +107,7 @@ header::before {
 header .form {
   display: flex;
   width: 100%;
-  max-width: 400px;
+  max-width: 500px;
   border-radius: 8px;
   border: 4px solid #ff416433;
 }
@@ -117,6 +118,7 @@ header .form input {
   border-radius: 4px 0 0 4px;
   width: 100%;
   outline: none;
+  font-size: 16px;
 }
 
 .target {
@@ -130,6 +132,10 @@ header .form input {
 
 .target span {
   margin: 0 10px;
+}
+
+.journey .row {
+  justify-content: center;
 }
 
 .journey h2 {
@@ -228,6 +234,11 @@ header .form input {
 .about p {
   margin-bottom: 10px;
   text-align: justify;
+}
+
+.about .subtitle {
+  font-size: 1.2em;
+  font-weight: 700;
 }
 
 footer {
