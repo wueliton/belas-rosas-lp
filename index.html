@@ -90,10 +90,10 @@
             todos os seus próximos projetos.</p>
           <form id="subscription">
             <div class="form">
-              <input type="mail" id="email" required name="email" placeholder="Seu melhor e-mail">
-              <button onclick="dataLayer.push({'event': 'cadastrar'})">Cadastrar</button>
+              <input type="mail" id="email" tabindex="1" required name="email" placeholder="Seu melhor e-mail">
+              <button tabindex="3" onclick="dataLayer.push({'event': 'cadastrar'})">Cadastrar</button>
             </div>
-            <p class="therms"><input type="checkbox" id="therm" /> <label for="therm">Quero receber por e-mail as novidades do Workshop Lindas Rosas</label></p>
+            <p class="therms"><input type="checkbox" tabindex="2" id="therm" /> <label for="therm">Quero receber por e-mail as novidades do Workshop Lindas Rosas</label></p>
           </form>
         </div>
         <div class="col-xl-6 headline"><img src="./images/capa-tecnicas.png" alt="Workshop Belas Rosas"></div>
@@ -140,7 +140,7 @@
               <li>Projeto prático do início ao fim</li>
               <li>Comunidade exclusiva para tirar dúvidas</li>
             </ul>
-            <a href="#form" class="button" onclick="dataLayer.push({'event': 'quero-me-inscrever'})">Quero me inscrever</a>
+            <a href="#form" id="subscribe-btn" class="button" onclick="dataLayer.push({'event': 'quero-me-inscrever'})">Quero me inscrever</a>
           </div>
         </div>
       </div>
@@ -256,6 +256,10 @@
         alert('Erro ao enviar o formulário, tente novamente mais tarde');
       });
     });
+
+    document.getElementById('subscribe-btn').addEventListener('click', function() {
+      setTimeout(() => document.querySelector('#email').focus(), 500);
+    })
   </script>
 </body>
 </html>
