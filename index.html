@@ -250,7 +250,9 @@
           "Content-Type": "application/json"
         },
         body: JSON.stringify({ email })
-      }).then((res) => alert('Enviado com sucesso')).catch((err) => {
+      }).then((res) => {
+        window.location.href = "./entrar-no-grupo.html";
+      }).catch((err) => {
         alert('Erro ao enviar o formulário, tente novamente mais tarde');
       });
     });
