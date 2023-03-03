@@ -79,10 +79,13 @@
           <p class="caption">Como iniciar sua primeira pintura em tecido
             com técnicas exclusivas que facilitam
             todos os seus próximos projetos.</p>
+          <form id="subscription">
             <div class="form">
-              <input type="mail" name="email" placeholder="Seu melhor e-mail">
+              <input type="mail" id="email" required name="email" placeholder="Seu melhor e-mail">
               <button onclick="dataLayer.push({'event': 'cadastrar'})">Cadastrar</button>
             </div>
+            <p class="therms"><input type="checkbox" id="therm" /> <label for="therm">Quero receber por e-mail as novidades do Workshop Lindas Rosas</label></p>
+          </form>
         </div>
         <div class="col-xl-6 headline"><img src="./images/capa-tecnicas.png" alt="Workshop Belas Rosas"></div>
       </div>
@@ -218,5 +221,30 @@
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PNMHMGB"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
+  <script>
+    document.getElementById('form').addEventListener('submit', function(event) {
+      event.preventDefault();
+      if(!document.getElementById('therm').checked) {
+        alert('É necessário aceitar as comunicações por e-mail');
+        return;
+      };
+
+      const email = document.getElementById('email').value;
+      if(!email) {
+        alert('É necessário informar um e-mail');
+        return;
+      };
+
+      fetch('https://www.api.lojaarteecor.com.br/.netlify/functions/api/sendmail', {
+        method: 'POST',
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({ email })
+      }).then((res) => alert('Enviado com sucesso')).catch((err) => {
+        alert('Erro ao enviar o formulário, tente novamente mais tarde');
+      });
+    });
+  </script>
 </body>
 </html>
